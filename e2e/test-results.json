@@ -1,0 +1,87 @@
+{
+  "config": {
+    "configFile": "/tmp/work/9d7ef13b-6f53-4d0f-aaf2-d5e0063d004e/playwright.config.ts",
+    "rootDir": "/tmp/work/9d7ef13b-6f53-4d0f-aaf2-d5e0063d004e/e2e",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/work/9d7ef13b-6f53-4d0f-aaf2-d5e0063d004e/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/tmp/work/9d7ef13b-6f53-4d0f-aaf2-d5e0063d004e/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "e2e/test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://localhost:5173",
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [],
+  "errors": [
+    {
+      "message": "Error: Playwright Test did not expect test.describe() to be called here.\nMost common reasons include:\n- You are calling test.describe() in a configuration file.\n- You are calling test.describe() in a file that is imported by the configuration file.\n- You have two different versions of @playwright/test. This usually happens\n  when one of the dependencies in your package.json depends on @playwright/test.",
+      "stack": "Error: Playwright Test did not expect test.describe() to be called here.\nMost common reasons include:\n- You are calling test.describe() in a configuration file.\n- You are calling test.describe() in a file that is imported by the configuration file.\n- You have two different versions of @playwright/test. This usually happens\n  when one of the dependencies in your package.json depends on @playwright/test.\n    at TestTypeImpl._currentSuite (/tmp/work/9d7ef13b-6f53-4d0f-aaf2-d5e0063d004e/node_modules/playwright/lib/common/testType.js:75:13)\n    at TestTypeImpl._describe (/tmp/work/9d7ef13b-6f53-4d0f-aaf2-d5e0063d004e/node_modules/playwright/lib/common/testType.js:115:24)\n    at Function.describe (/tmp/work/9d7ef13b-6f53-4d0f-aaf2-d5e0063d004e/node_modules/playwright/lib/transform/transform.js:282:12)\n    at /tmp/work/9d7ef13b-6f53-4d0f-aaf2-d5e0063d004e/e2e/app.spec.ts:58:6",
+      "location": {
+        "file": "/tmp/work/9d7ef13b-6f53-4d0f-aaf2-d5e0063d004e/e2e/app.spec.ts",
+        "column": 6,
+        "line": 58
+      },
+      "snippet": "\u001b[90m   at \u001b[39mapp.spec.ts:58\n\n  56 | // ─── Tests ────────────────────────────────────────────────────────────────────\n  57 |\n> 58 | test.describe('Mood Streak App', () => {\n     |      ^\n  59 |\n  60 |   test.beforeEach(async ({ page }) => {\n  61 |     await page.goto('/')"
+    },
+    {
+      "message": "Error: No tests found",
+      "stack": "Error: No tests found"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-02-28T15:58:00.009Z",
+    "duration": 1010.6229999999998,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
